@@ -61,6 +61,32 @@
   
   /* HEADER / NAVBAR STYLES END */
 
+  /* FOOTER STYLES START */
+footer {
+  background: #fce138;
+  padding: 40px 35px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+footer h2 {
+  color: #024e76;
+  font-size: 30px;
+  margin: 0;
+}
+
+footer div {
+  line-height: 1.5;
+  text-align: right;
+}
+
+footer a {
+  color: #024e76;
+}
+/* END FOOTER STYLES */
+
   /* STYLE ALL SECTION TAGS */
 section {
     padding: 60px;
@@ -135,6 +161,169 @@ section {
   } 
   /* HERO STYLES END */
 
+  /* SECTION TITLE STYLES START */
+.section-title {
+  font-size: 48px;
+  font-weight: bolder;
+  border-bottom: 3px solid;
+  color: #001aff;
+  padding-bottom: 20px;
+  text-align: center;
+  margin: 0 auto 35px auto;
+  width: 50%;
+}
+
+.primary-border {
+  border-color: #fce138;
+}
+
+.secondary-border {
+  border-color: #39a6b2;
+}
+/* SECTION TITLE STYLES END */
+
+/* ABOUT ME STYLES */
+
+.intro p {
+  line-height: 1.7;
+  color: #39a6b2;
+  width: 80%;
+  margin: 0 auto;
+  font-weight: bolder;
+  font-size: 20px;
+  text-align: center;
+}
+/* ABOUT ME STYLES END */
+
+/* projects STYLES START */
+.steps { 
+  background: #fce138;
+}
+
+.step {
+  margin: 50px auto;
+  padding-bottom: 50px;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.step:nth-child(even) {
+  border-bottom: 3px solid #39a6b2;
+}
+
+.step:not(:last-child) {
+  border-bottom: 3px solid #39a6b2;
+}
+
+.step h3 {
+  color: #024e76;
+  font-size: 46px;
+  flex: 1 30%;
+}
+
+.step-info {
+  flex: 2 70%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.step-img {
+  flex: 1 12%;
+  margin-right: 20px;
+}
+
+.step-img img {
+  max-width: 100%;
+}
+
+.step-text {
+  flex: 12;
+}
+
+.step-text p {
+  color: #39a6b2;
+  font-size: 18px;
+}
+
+.step-text h4 {
+  font-size: 26px;
+  line-height: 1.5;
+  color: #024e76;
+}
+
+/* PROJECTS STYLES END */
+
+/* contact me START */
+
+.contact {
+  background: #024e76;
+}
+
+.contact h2 {
+  color: #fce138;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact-info > * {
+  flex: 1;
+  margin: 15px;
+}
+
+.contact-info iframe {
+  height: 400px;
+}
+
+.contact-info div {
+  color: white;
+}
+
+.contact-info h3 {
+  color: #fce138;
+  font-size: 32px;
+}
+
+.contact-info p, .contact-info address {
+  margin: 20px 0;
+  line-height: 1.5;
+  font-size: 16px;
+  font-style: normal;
+}
+
+.contact-form input, .contact-form textarea {
+  border: 1px solid #024e76;
+  display: block;
+  padding: 7px 15px;
+  font-size: 16px;
+  color: #024e76;
+  width: 100%;
+  margin-bottom: 15px;
+  margin-top: 5px;
+}
+
+.contact-form button {
+  width: 100%;
+  border: none;
+  background: #fce138;
+  color: #024e76;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 16px;
+}
+
+.contact-info a {
+  color: #fce138;
+}
+
+/* contact me end */
 
 
 
@@ -147,6 +336,19 @@ section {
 
 
 
+
+/* UTILITIES */
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.flex-row {
+  display: flex;
+}
 
   /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
 @media screen and (max-width: 980px) {
@@ -308,3 +510,89 @@ section {
   .contact-form button:hover {
     color: #fce138;
     background: #39a6b2;
+
+    /* update existing rule with this declaration */
+.form-input {
+  background-color: rgba(255,255,255, 0.75);
+}
+
+/* create a new rule for focus state */
+.form-input:focus {
+  background-color: rgba(255,255,255, 1);
+}
+
+.form-input:focus {
+  background-color: rgba(255,255,255, 1);
+  outline: none;
+}
+
+.contact-form input, .contact-form textarea {
+  /* add a transparent background here */
+  background-color: rgba(255,255,255, 1);
+}
+
+/* create a new css rule for focus state */
+.contact-form input:focus, .contact-form textarea:focus {
+  background-color: rgba(255,255,255, 1);
+}
+
+.checkbox-wrapper input, .radio-wrapper input {
+  opacity: 0;
+}
+
+.checkbox-wrapper label, .radio-wrapper label {
+  position: relative;
+  left: 10px;
+  margin: 10px;
+  line-height: 1.6;
+}
+
+.checkbox-wrapper label::before, .radio-wrapper label::before {
+  content: "";
+  height: 20px;
+  width: 20px;
+  background: rgba(255, 255, 255, 0.75);  
+  border: 1px solid #024e76;  
+  position: absolute;
+  top: -4px;
+  left: -30px;
+}
+
+.radio-wrapper label::before {
+  border-radius: 50%;
+}
+
+.radio-wrapper label::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #024e76;
+  position: absolute;
+  left: -29px;
+  top: -3px;
+  background-image: radial-gradient(circle, #39a6b2, #024e76);
+}
+
+.checkbox-wrapper label::after {
+  content: "";
+  height: 6px;
+  width: 14px;
+  border-left: 2px solid #024e76;
+  border-bottom: 2px solid #024e76;
+  position: absolute;
+  left: -26px;
+  top: 1px;
+  transform: rotate(-58deg);
+}
+
+.checkbox-wrapper input + label::after, 
+.radio-wrapper input + label::after {
+  content: none;
+}
+
+.checkbox-wrapper input:checked + label::after, 
+.radio-wrapper input:checked + label::after {
+  content: "";
+}
+
